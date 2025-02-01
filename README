@@ -1,0 +1,16 @@
+
+#######  COMO INSTALAR KUBERNETS #####
+
+No docker desktop ja tem nas configuracoes o kubernets para ativar. 
+caso der erro, é desinstalar o docker e instalar novamente 
+
+----------------------------------------------------------------
+
+depois de instalado vamos iniciar ele no powershell 
+caso tenha instalado o wsl2 não precisa instalar o kubernets no linux, pois ao instalar pelo docker 
+ja fica preconfigurado no linux. 
+
+comando para teste 
+
+kubectl get nodes --- isso no powershell 
+
