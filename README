@@ -13,4 +13,14 @@ ja fica preconfigurado no linux.
 comando para teste 
 
 kubectl get nodes --- isso no powershell 
+---------------------------------------------------------------------------------------------------------------------
+
+Instale o minikube no powershell  
+
+winget install Kubernetes.minikube
+
+comando para descobrir o path e a versão do minikube { Get-Command minikube } - execute no powershell 
+
+
+
 
