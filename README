@@ -53,6 +53,24 @@ sudo install minikube /usr/local/bin/
 
 WINDOWS
 
+ativar o hyper-V comando ( bcdedit /set hypervisorlaunchtype auto )
+desativar o hyper-V comando (bcdedit /set hypervisorlaunchtype off -- desativar para não conflitar com virtualbox)
+
+
+KUBECTL 
+
+1. kubectl run nginx-pod --image=nginx:latest
+2. kubectl get pods
+3. kubectl get pods --watch
+4. kubectl describe pod nginx-pod    (é uma descrição detalhada do pod criado. como se fosse um inspect do docker)
+5. kubectl edit pod nginx-pod     (aqui voce pode editar o arquivo no que deseja mudar no pod)
+
+
+obs: Executamos o nosso primeiro Pod. Porém, como o Kubernetes armazena as imagens baixadas dentro do cluster?
+
+A resposta é simples: quando definimos que um Pod será executado, o scheduler definirá em qual Node isso acontecerá. 
+O resultado então é que as imagens quando baixadas de repositórios como o Docker Hub, serão armazenadas localmente em cada Node, 
+não sendo compartilhada por padrão entre todos os membros do cluster.
 
 
 
