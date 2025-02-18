@@ -22,13 +22,22 @@ winget install Kubernetes.minikube
 comando para descobrir o path e a versão do minikube { Get-Command minikube } - execute no powershell 
 
 INSTALANDO NO LINUX 
-
+**************************************************************************************************************
 1 . BAIXA esse arquivo curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 2. permissões: chmod +x kubectl
 3. criar pasta: mkdir -p ~/.local/bin
 4. mover para essa pasta:  mv ./kubectl ~/.local/bin/kubectl
 5. navegar ate a pasta e setar uma variavel de ambiente: export KUBECTL=$(pwd)/kubectl
 6. verificar se ficou tudo instalado corretamente: kubectl version --client
+**************************************************************************************************************
+
+ATIVAR O MINIKUBE
+
+1.  minikube start --driver=docker
+
+
+
+
 7. fazer o download do virtual box e instalar ele : sudo dpkg -i virtualbox-7.1_7.1.6-167084~Ubuntu~oracular_amd64.deb
 8. caso precise, instalar os pacotes necessarios do linux: sudo apt --fix-broken install
 9. caso erro continue, coloque todos esses comandos:sudo apt update
@@ -49,6 +58,7 @@ Instalação para linux simplificada
 2. sudo mkdir -p /usr/local/bin/
 sudo install minikube /usr/local/bin/
 3. minikube start --vm-driver=<driver_name>
+
 
 
 WINDOWS
@@ -72,6 +82,10 @@ A resposta é simples: quando definimos que um Pod será executado, o scheduler 
 O resultado então é que as imagens quando baixadas de repositórios como o Docker Hub, serão armazenadas localmente em cada Node, 
 não sendo compartilhada por padrão entre todos os membros do cluster.
 
+
+APLICAR O PRIMEIRO Pod
+
+1. kubectl apply -f .\arquivo.yaml
 
 
 
