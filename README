@@ -87,5 +87,26 @@ APLICAR O PRIMEIRO Pod
 
 1. kubectl apply -f .\arquivo.yaml
 
+CASO QUEIRA DELETAR O POD 
 
+1. kubectl delete -f .\arquivo.yaml
+**************************************************************************************************************
+
+caso o kubectl estiver com problemas e nao aparecer nada, executa isso:
+
+minikube delete
+minikube start --force
+
+minikube start --force --driver=docker --embed-certs --kubernetes-version=v1.32.0
+
+se o problema persistir: 
+docker system prune -af --volumes
+minikube delete
+minikube start
+
+tente novamente:
+kubectl create deployment nginx --image=nginx
+kubectl get pods -w
+
+**************************************************************************************************************
 
