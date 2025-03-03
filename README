@@ -110,3 +110,10 @@ kubectl get pods -w
 
 **************************************************************************************************************
 
+NodePort : ele abre a comunicação para o mundo externo. 
+
+**************************************************************************************************************
+
+LoaderBalancer : abre comunicação para o mundo externo usando o load balancer do provedor
+
+afd
